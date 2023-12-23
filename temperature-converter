@@ -1,0 +1,23 @@
+class temperature:
+    def __init__(self):
+        print("Convertidor de temperatura")
+        texto = "1. Celsius a Fahrenheit\n2. Fahrenheit a Celsius\n"
+
+        option = int(input(texto))
+        
+        if option == 1:
+            grade = int(input("Ingresa la temperatura (Celsius): "))
+            temperature.to_fahrenheit(grade)
+        elif option == 2:
+            grade = int(input("Ingresa la temperatura (Fahrenheit): "))
+            temperature.to_celsius(grade)
+
+    def to_fahrenheit(grade):
+        F = (grade * 1.8) + 32
+        print(f"{F} grados fahrenheit")
+        
+    def to_celsius(grade):
+        C = (grade - 32) / 1.8
+        print(f"{C} grados celsius")
+
+temperature()
